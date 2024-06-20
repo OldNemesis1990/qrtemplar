@@ -1,0 +1,99 @@
+$dark-color: #2c2c2c;
+$lightColor: #fff;
+$brandColor: #6699cc;
+$border-radius: 3px;
+
+.SelectorBox {
+    background-color: $dark-color;
+    border-radius: $border-radius;
+    display: flex;
+    box-shadow: 0 0 0 3px $brandColor;
+    padding: 4vh 8vh;
+
+    .PackageSelector {
+        margin: 0 auto;
+    }
+}
+
+.PackageTable {
+    min-height: calc(100vh - 370px);
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background: #dbdbdb;
+    margin-top: 25px;
+    border-radius: $border-radius;
+    box-shadow: 0 0 0 3px $brandColor;
+}
+
+.table.tGrey {
+    background: #2c2c2c;
+    margin-bottom: 0;
+
+    th {
+        color: $brandColor;
+        border: 0;
+        h2 {
+            color: $brandColor;
+            text-align: center;
+        }
+        h4 {
+            text-align: center;
+        }
+    }
+    tr {
+        border-color: #000;
+    }
+    tbody tr {
+        transition: all 0.5s linear;
+    }
+    tbody tr:nth-child(odd) {
+        background: #4c4c4c;
+    }
+    tbody tr:last-child {
+        border-width: 0;
+    }
+    tbody tr:hover {
+        background: #fefefe;
+        // transition: all 0.5s linear;
+    }
+    td {
+        color: $brandColor;
+        span.check {
+            color: #06ff00;
+        }
+    }
+}
+
+.choose {
+    position: relative;
+}
+
+.choose:before {
+    display: block;
+    content: "^";
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 10vh;
+    width: 10vh;
+    font-size: 10vh;
+    text-align: center;
+    color: #6699cc;
+    top: -10vh;
+    overflow: hidden;
+    animation-name: upArrow;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+// Keyframes
+
+@keyframes upArrow {
+    0% {top: -10vh;}
+    50% {top: -22vh;}
+    100% {top: -10vh;}
+}

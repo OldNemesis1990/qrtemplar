@@ -1,0 +1,115 @@
+.registration-form {
+    background: #2c2c2c;
+    // padding: 25px;
+    min-height: calc(100vh - 370px);
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 0 0 3px #6699cc;
+    position: relative;
+    align-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    
+    .response-message {
+        width: 100%;
+    }
+}
+
+.pageNumber {
+    padding: 25px;
+}
+
+.userInputsOuter {
+    width: 100%;
+    
+    .package-display{
+        margin-bottom: 6vh;
+
+        label {
+            margin: 0 auto;
+            width: 100%;
+        }
+        h2 {
+            color: $brandColor;
+            text-align: center;
+        }
+        input {
+            background: transparent;
+            text-align: center;
+            color: $brandColor;
+            border: 1px solid $brandColor;
+            outline: none;
+        }
+    }
+    .userRegistrationFields {
+        input {
+            background: transparent;
+            color: $brandColor;
+            border: 0px solid $brandColor;
+            border-bottom-width: 1px;
+            border-radius: 0;
+            outline: none;
+            margin-bottom: 15px;
+
+        }
+        input::placeholder {
+            color: $brandColor;
+        }
+
+        label {
+            color: $brandColor;
+        }
+        
+        .form-floating > .form-control:-internal-autofill-selected {
+            -webkit-text-fill-color: #6699cc;
+            background: #000 !important;
+            // transition: background-color 5000s;
+        }
+    }
+}
+
+.accountInputsOuter {
+    width: 100%;
+
+    .accountsRegistrationFields {
+        input {
+            background: transparent;
+            color: $brandColor;
+            border: 0px solid $brandColor;
+            border-bottom-width: 1px;
+            border-radius: 0;
+            outline: none;
+            margin-bottom: 15px;
+
+        }
+        select {
+            background: transparent;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23eeefff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 16px 12px;
+            color: $brandColor;
+            border: 0px solid $brandColor;
+            border-bottom-width: 1px;
+            border-radius: 0;
+            outline: none;
+            margin-bottom: 15px;
+        }
+        input::placeholder {
+            color: $brandColor;
+        }
+
+        label {
+            color: $brandColor;
+        }
+        
+        .form-floating > .form-control:-internal-autofill-selected {
+            -webkit-text-fill-color: #6699cc;
+            background: #000 !important;
+            // transition: background-color 5000s;
+        }
+    }
+}

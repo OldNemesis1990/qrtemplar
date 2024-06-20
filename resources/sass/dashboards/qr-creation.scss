@@ -1,0 +1,68 @@
+$prim-bg: #2c2c2c;
+$sec-bg: #fff;
+$prim-color: #6699cc;
+$sec-color: #00dfff;
+$ltc: #fff;
+$dtc: #000;
+$lbtn-shadow: #c2c2c2; 
+$dhover-color: #fff;
+$lhover-color: #2c2c2c;
+
+#qrDesignComponent {
+    background: $sec-bg;
+    padding: 1.5vh;
+
+    .option-selection {
+        margin-bottom: 2.5vw;
+        .btn-option {
+            background-color: $prim-color;
+            border: 1px solid $prim-color;
+            color: $ltc;
+            font-weight: bold;
+            transition: all 0.3s linear;
+        }
+        .btn-option:hover {
+            background: $prim-bg;
+            border: 1px solid $lhover-color;
+            color: $dhover-color;
+        }
+
+        .btn-generate {
+            background: $sec-color;
+            border: 1px solid $sec-color;
+            color: $dtc;
+            transition: all 0.3s linear;
+        }
+
+        .btn-generate:hover {
+            background-color: $sec-bg;
+            border: 1px solid $lhover-color;
+            color: $dtc;
+        }
+    }
+
+    .naming-field {
+        margin-bottom: 2.5vw;
+    }
+
+    .image-holder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h4 {
+        color: $ltc;
+    }
+
+    .qr-code-options {
+        p, label, .toggleLabel, h4 {
+            color: $dtc;
+        }
+
+        span.separator:first-child:after, span.separator:not(:first-child, :last-child):after, span.separator:last-child:after {
+            background: #2c2c2c;
+        }
+
+    }
+}

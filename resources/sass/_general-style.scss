@@ -1,0 +1,420 @@
+// layout
+// widths
+$f-width: 100%;
+$tq-width: 75%;
+$half-width: 50%;
+$q-width: 25%;
+
+// heights
+$f-height: 100vh;
+$tq-height: 75vh;
+$half-height: 50vh;
+$q-height: 25vh;
+
+// cards
+$br: 6px;
+$bw: 1px;
+$bs: solid;
+
+// Import fonts
+@font-face {
+    src: url("/../fonts/templar-regular.ttf");
+    font-family: "templar-reg";
+}
+
+@font-face {
+    src: url("/../fonts/templarheavy.ttf");
+    font-family: "templar-heavy";
+}
+
+@font-face {
+    src: url("/../fonts/OldeEnglishRegular-Zd2J.ttf");
+    font-family: "oef";
+}
+
+@font-face {
+    src: url("/../fonts/Gotham-Medium.otf");
+    font-family: "gotham-medium";
+}
+
+@font-face {
+    src: url("/../fonts/Gotham-Black-Regular.ttf");
+    font-family: "gotham-regular";
+}
+
+@font-face {
+    src: url("/../fonts/Gotham-Book.otf");
+    font-family: "gotham-book";
+}
+
+@font-face {
+    src: url("/../fonts/Gotham-Bold.otf");
+    font-family: "gotham-bold";
+}
+
+@font-face {
+    src: url("/../fonts/digit.ttf");
+    font-family: "digit";
+}
+
+// colours
+$prim-bg-colour: #eaeaea;
+$seco-bg-colour: #fff;
+$border-colour: #b200fd;
+// $nav-bg: linear-gradient(45deg, rgba(44,44,44,1) 0%, rgba(83,83,83,1) 62%, rgba(96,96,96,1) 70%, rgba(156,156,156,1) 89%, rgba(198,198,198,1) 100%);
+$nav-bg: rgba(44, 44, 44, 1);
+$dark-bg: rgba(44, 44, 44, 1);
+$templar-colour: #6699cc;
+
+// fonts
+$gotham-medium: "gotham-medium";
+$gotham-regular: "gotham-regular";
+$gotham-book: "gotham-book";
+$gotham-bold: "gotham-bold";
+$digit: "digit";
+
+div#app {
+    min-height: calc(100vh - 239px);
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+body.the_body {
+    background: $prim-bg-colour;
+    width: $f-width;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $gotham-book;
+}
+
+p,
+a,
+li,
+ol,
+span,
+strong,
+tr,
+td,
+th {
+    font-family: $gotham-book;
+}
+
+.navbar-burger {
+    display: flex;
+    height: 30px;
+    width: 50px;
+    justify-content: space-between;
+    align-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+    .nav-burger {
+        background: $templar-colour;
+        display: flex;
+        height: 2px;
+        transition: all 0.5s ease;
+    }
+
+    span.top-bar {
+        width: 100%;
+    }
+
+    span.mid-bar-top {
+        width: 80%;
+    }
+
+    span.mid-bar-bot {
+        width: 60%;
+        transition-delay: 0.20s;
+    }
+
+    span.bot-bar {
+        width: 40%;
+        transition-delay: 0.50s;
+    }
+
+}
+
+#navbarDropdown:hover {
+    span.mid-bar-top {
+        width: 100%;
+    }
+
+    span.mid-bar-bot {
+        width: 100%;
+    }
+
+    span.bot-bar {
+        width: 100%;
+    }
+}
+
+.navbar-burger.show {
+    .nav-burger {
+        width: 100%;
+    }
+}
+
+.homepage-title {
+    max-width: 1235px;
+    margin: 0 auto;
+    background: #2c2c2c;
+    border-radius: 3px;
+    box-shadow: 0 0 3px 0px #6699cc;
+    padding: 15px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.homepage-title span {
+    color: #6699cc;
+    font-family: $digit;
+}
+
+.homepage-title:after {
+    content: "";
+    /* display: block; */
+    width: 0;
+    height: 0;
+    border-top: 20px solid #6699cc;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    position: absolute;
+    right: 0px;
+    left: 0;
+    text-align: center;
+    margin: 0 auto;
+    top: 100%;
+}
+
+.homepage-title h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 4vh;
+}
+
+.qr-container {
+    width: $f-width;
+    max-width: 98%;
+    margin: 0 auto;
+}
+
+.qr-card {
+    display: flex;
+    width: 100%;
+}
+
+.form-input-holder {
+    background: $seco-bg-colour;
+    border: $bw $bs $templar-colour;
+    border-bottom: 0;
+    height: 100%;
+    min-height: 40vh;
+}
+
+.qr-control-manager {
+    background: $seco-bg-colour;
+    border: $bw $bs $templar-colour;
+    border-bottom: 0;
+    height: 100%;
+    min-height: 40vh;
+}
+
+.control-panel {
+    background: $seco-bg-colour;
+    border: $bw $bs $templar-colour;
+    border-top: 0;
+    padding: 2vh 2%;
+}
+
+nav.navbar {
+    background: $nav-bg;
+    border-bottom: 5px solid $templar-colour;
+}
+
+.navbar-brand {
+    color: $templar-colour;
+}
+
+.navbar-nav .nav-link {
+    color: $templar-colour;
+    font-family: $gotham-book;
+}
+
+.navbar-brand {
+    color: $templar-colour;
+    font-family: $gotham-bold;
+}
+
+.capture-fields div {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.qr-capturer {
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.generate-Btn {
+    position: absolute;
+    bottom: 0;
+    right: 1vh;
+    background: $dark-bg;
+    color: $templar-colour;
+    outline: none;
+    border: 0;
+    padding: 1vh 5vh;
+}
+
+.qr-navigation {
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 3px 0px $templar-colour;
+    padding: 15px;
+}
+
+.qr-navigation .qr-link {
+    text-decoration: none;
+    font-family: $gotham-book;
+    color: $templar-colour;
+}
+
+input::placeholder,
+form input,
+form textarea {
+    font-family: $gotham-book;
+}
+
+.qr-form-holder {
+    background: $seco-bg-colour;
+    padding: 10px;
+    border-radius: 3px;
+    min-height: 100%;
+    box-shadow: 0 0 3px 0px $templar-colour;
+}
+
+.qr-code-image img {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+#qr-templar-footer {
+    background: #2c2c2c;
+    border-top: 3px solid #6699cc;
+    padding: 5vh 0;
+}
+
+.qr-form-attributes {
+    position: relative;
+}
+
+.loader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 9;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#qr-templar-footer .logo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+#qr-templar-footer .logo h2 {
+    color: #6699cc;
+    font-family: $digit;
+}
+
+.logo-container {
+    perspective: 800px;
+    width: 140px;
+    height: 140px;
+}
+
+.logo-cube {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation-name: logoBlock;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+}
+
+.side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    opacity: 0.9;
+}
+
+.front {
+    transform: rotateY(0deg) translateZ(50px);
+    background-image: url('/images/qr-templar-logo-front-side.png');
+    background-size: contain;
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(50px);
+    // background-image: #ffcc00;
+    background-image: url('/images/qr-templar.png');
+    background-size: contain;
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(50px);
+    background-image: url('/images/qr-templar.png');
+    background-size: contain;
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(50px);
+    background-image: url('/images/qr-templar.png');
+    background-size: contain;
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(50px);
+    background-image: url('/images/qr-templar.png');
+    background-size: contain;
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(50px);
+    background-image: url('/images/qr-templar.png');
+    background-size: contain;
+}
+
+@keyframes logoBlock {
+    0% {
+        transform: rotate3d(-1, 1, 1, 0deg);
+    }
+
+    100% {
+        transform: rotate3d(-1, 1, 1, 360deg);
+    }
+}

@@ -1,0 +1,177 @@
+.color-selection {
+    margin: 10px 0;
+}
+
+.qrSizeSelection {
+    margin: 20px 0px;
+}
+
+.qr-form-attributes {
+    background: $dark-bg;
+    padding: 10px;
+    border-radius: 3px;
+    min-height: 100%;
+    box-shadow: 0 0 3px 0px $templar-colour;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.btn.btn-generate {
+    background: $templar-colour;
+    color: #fff;
+}
+
+.btn.btn-generate:disabled {
+    background: $seco-bg-colour;
+    color: $templar-colour;
+}
+
+.toggleLabel {
+    color: #fff;
+}
+
+div#qrSizing {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+}
+
+span.separator:first-child {
+    margin: 0 auto;
+    text-align: center;
+}
+
+span.separator {
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    width: 100%;
+}
+
+span.separator:last-child {
+    margin: 0 auto;
+    text-align: center;
+}
+
+span.separator:not(:first-child, :last-child):after {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    top: calc(53px - 9px);
+    left: 0;
+    z-index: 1;
+}
+
+span.separator:first-child:after {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 50%;
+    background: #fff;
+    position: absolute;
+    top: calc(53px - 9px);
+    right: 0;
+    z-index: 1;
+}
+
+span.separator:last-child:after {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 50%;
+    background: #fff;
+    position: absolute;
+    top: calc(53px - 9px);
+    left: 0;
+    z-index: 1;
+}
+
+span.separator input {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    z-index: 2;
+    cursor: pointer;
+}
+
+span.separator:first-child input {
+    margin: 0 auto;
+}
+
+span.separator:last-child input {
+    margin: 0 auto;
+}
+
+span.separator input:before {
+    content: "";
+    display: block;
+    height: 12px;
+    width: 12px;
+    background: #fff;
+    opacity: 1;
+    border-radius: 50%;
+    margin: 0 0px 0 0;
+    box-shadow: 0 0 2px 2px #69c;
+    transition: all 0.5s ease;
+}
+
+span.separator input:checked:before {
+    background: #2c2c2c;
+    padding: 4px;
+    height: 18px;
+    width: 18px;
+    // border: 2px solid #69c;
+    box-shadow: 0 0 2px 2px #69c, 0 0 1px 2px #69c inset;
+    margin: -2px 0px 0px -2px;
+    transition: all 0.5s ease;
+}
+
+.sizingLabel {
+    color: #fff;
+    text-align:center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+div#background-toggle, div#foreground-toggle {
+    cursor: pointer;
+}
+
+.error-msg {
+    border-radius: 3px;
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    padding: 15px;
+    font-family: $gotham-book;
+}
+
+span.spinner {
+    display: block;
+    height: 50px;
+    width: 50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 0 10px 0px 1px #6699cc, 0 -10px 0px 1px #2c2c2c, 0 -6px 0px 1px #6699cc inset, 0 6px 0px 1px #2c2c2c inset;
+    animation-iteration-count: infinite;
+    animation-name: spinner;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+
+@keyframes spinner {
+    0% {transform: rotate(0deg)}
+    // 40% {transform: rotate(160deg)}
+    // 60% {transform: rotate(180deg)}
+    100% {transform: rotate(360deg)}
+}

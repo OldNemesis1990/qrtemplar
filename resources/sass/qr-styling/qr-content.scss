@@ -1,0 +1,128 @@
+$containerMaxWidth: 1235px;
+$containerAlign: 0 auto; 
+$lighBG: #fff;
+$darkBG: #2c2c2c;
+$borderRadius: 3px;
+$borderGlow: 0 0 3px 0px #6699cc;
+$containerPadding: 1.5rem;
+$containerTBSpacing: 0.5rem 0;
+
+.container-width {
+    max-width: $containerMaxWidth;
+    margin: $containerAlign;
+}
+
+#qr-templar-intro {
+    background: $lighBG;
+    border-radius: $borderRadius;
+    box-shadow: $borderGlow;
+    padding: $containerPadding;
+    margin: $containerTBSpacing;
+}
+
+#qr-templar-reason {
+    margin: $containerTBSpacing;
+
+    .row {
+        margin-left: 0;
+    }
+}
+
+%reasonCommon {
+    border-radius: $borderRadius;
+    box-shadow: $borderGlow;
+    padding: $containerPadding;
+}
+
+#qr-templar-reason .logo {
+    @extend %reasonCommon;
+    background: $darkBG;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#qr-templar-reason .reason-content {
+    @extend %reasonCommon;
+    background: $lighBG;
+}
+
+.reason-content .title {
+    text-align: center;
+    background: #2c2c2c;
+    padding: 0.5rem;
+    margin-bottom:0.5rem;
+    h2 {
+        color: #6699cc;
+        font-size: 4vh;
+        span {
+            font-family: $digit;
+        }
+    }
+    h4 {
+        color: #fff;
+        font-size: 1.5vh;
+    }
+} 
+
+#qr-templar-intro .title {
+    text-align: center;
+    background: #2c2c2c;
+    padding: 0.5rem;
+    margin-bottom:0.5rem;
+    h2 {
+        color: #6699cc;
+        font-size: 4vh;
+    }
+}
+
+.feedback-form {
+    margin: 15px 0;
+}
+
+.feedback-fields {
+    margin-bottom: 15px;
+}
+
+.response-message {
+    padding: 5px;
+    background: linear-gradient(90deg, rgba(102,153,204,1) 0%, rgba(44,44,44,1) 25%, rgba(44,44,44,1) 75%, rgba(102,153,204,1) 100%);
+    left: -2px;
+    top: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background-size: 400%;
+    animation-name: feedbackResponseBlock;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.response-message-inner {
+    padding: 15px;
+    background: #fff;
+}
+
+.fieldValidation {
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 3px;
+}
+
+.fieldValidation p {
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-family: $gotham-bold;
+    margin-bottom: 0;
+}
+
+@keyframes feedbackResponseBlock {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 400% 0;
+    }
+}
